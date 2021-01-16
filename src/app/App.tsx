@@ -1,8 +1,13 @@
 import React from 'react';
-import LoginPage from './login/Login';
+import { Header } from './header';
+import { LoginPage } from './login';
 
 export default function App(): JSX.Element {
     return (
-        <LoginPage />
+       <React.Fragment>
+           <Header />
+           <LoginPage />
+       </React.Fragment>
+       
     );
 }
