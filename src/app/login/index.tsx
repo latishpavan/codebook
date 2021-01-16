@@ -19,10 +19,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         cursor: 'pointer',
         color: 'lightgray',
         fontSize: '20px',
-        borderRadius: '3%'
+        borderTopLeftRadius: '4px',
+        borderBottom: '1px solid'
     },
     activeTab: {
-        backgroundColor: '#0063cc',
+        backgroundColor: '#764abc',
         color: 'white'
     },
     paper: {
@@ -47,7 +48,7 @@ export function LoginPage(): JSX.Element {
 
     return (
         <div className={classes.root}>
-            <Paper elevation={10} className={classes.paper}>
+            <Paper elevation={6} className={classes.paper}>
                 <Grid container>
                     <Grid item xs={6}>
                         <div className={classnames(classes.tab, {

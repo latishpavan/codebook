@@ -47,7 +47,10 @@ export default function LoginPage(): JSX.Element {
 						<AccountCircle />
 					</Grid>
 					<Grid item>
-						<TextField label="Username" variant="standard" />
+						<TextField
+							label="Username"
+							variant="standard"
+						/>
 					</Grid>
 				</Grid>
 			</FormControl>
