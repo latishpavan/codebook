@@ -2,14 +2,14 @@ import * as React from 'react';
 import classnames from 'classnames';
 import Login from './Login';
 import Signup from './Signup';
-import { Paper, makeStyles, Grid } from '@material-ui/core';
+import { Paper, makeStyles, Grid, Theme } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: theme.spacing(20)
+        marginTop: theme.spacing(10)
     },
     tab: {
         display: 'flex',
@@ -17,10 +17,12 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         height: '50px',
         cursor: 'pointer',
-        color: 'lightgray'
+        color: 'lightgray',
+        fontSize: '20px',
+        borderRadius: '3%'
     },
     activeTab: {
-        backgroundColor: '#3f51b5',
+        backgroundColor: '#0063cc',
         color: 'white'
     },
     paper: {
@@ -45,7 +47,7 @@ export function LoginPage(): JSX.Element {
 
     return (
         <div className={classes.root}>
-            <Paper elevation={3} className={classes.paper}>
+            <Paper elevation={10} className={classes.paper}>
                 <Grid container>
                     <Grid item xs={6}>
                         <div className={classnames(classes.tab, {

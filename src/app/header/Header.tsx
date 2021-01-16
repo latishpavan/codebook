@@ -5,8 +5,10 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '3%'
     }
 }));
 
@@ -15,8 +17,11 @@ export default function Header() {
     
     return (
         <div className={classNames.root}>
-            <Typography variant="h2">
+            <Typography variant="h1">
                 CodeBook
+            </Typography>
+            <Typography variant="subtitle2">
+                Practise coding, prepare for interviews with friends
             </Typography>
         </div>
     );
