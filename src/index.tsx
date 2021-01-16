@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-function App(): JSX.Element {
-    return <div>Hello World</div>;
-}
+import App from './app/App';
 
 let node = document.getElementById('root');
 

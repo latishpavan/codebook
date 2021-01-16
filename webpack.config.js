@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -12,11 +13,16 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin({})
     ],
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: path.resolve(__dirname, 'build')
+        contentBase: path.resolve(__dirname, 'build'),
+        hot: true,
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     module: {
         rules: [
